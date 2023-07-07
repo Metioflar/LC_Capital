@@ -272,7 +272,6 @@ header.sticky {
 .about-section {
     position: relative;
     /* background: url(bg-2.png);
-
     background-color: linear-gradient(#0c0c0c, #00000000);
     background-size: cover;
     background-position: center; */
@@ -298,13 +297,16 @@ header.sticky {
 .texto-sobre{
     margin-top:10px;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: center; 
+
 }
 
 .texto-sobre-baixo{
     margin-top:50px;
     align-items: baseline;
-    text-align: center;
+    /* text-align: center; */
+    text-align: justify;
+    /* text-justify: inter-word; */
 }
 .about img {
     display: flex;
@@ -540,16 +542,15 @@ header.sticky {
     background: linear-gradient(var(--bg-color), var(--second-bg-color));
 }
 
-
-    .title-modal{
-    color: white;
-    margin-top: 3% !important;
-    margin-bottom: 4% !important;
-    font-size: 26px;
-    font-weight: 200;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.title-modal{
+color: white;
+margin-top: 3% !important;
+margin-bottom: 4% !important;
+font-size: 26px;
+font-weight: 200;
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
 
 }
 .text-modal{
@@ -558,6 +559,13 @@ header.sticky {
     line-height: 1.8;
     font-weight: 400;
     text-align: justify!important;
+        /* TENTANDO DAR QUEBRA DE LINHA COM ESSA PROPRIEDADE DO TEXT-MODAL */
+    word-break: break-all;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    [lang]:lang(pt-bt) { hyphenate-character: "-"  }
 }
 /* FIM POP UPS */
 .read {
@@ -584,6 +592,7 @@ header.sticky {
     transform: translateY(-8px);
     cursor: pointer;
 }
+
 /*---------------------- CONTATO ----------------------*/
 .contact {
     /* background: url(bg-t.png);
@@ -859,10 +868,16 @@ header.sticky {
         justify-content: center;
         text-align: center;
     }
+    .box {
+        max-width: 600px;
+        height: 330px!important;
+        position: block;
+        min-width: 200px;
+    }
 
-    /* .item-sobre-separado {
-        max-width: 300px;
-    } */
+    .box h3{
+        font-size: 20px !important;
+    }
 
     .logo img{
         padding-top: 25px;
@@ -1163,24 +1178,17 @@ header.sticky {
 }
 }
 
-/* --------MOBILE-------- */
-/* @media (max-width: 425px){
+/* -------------MAIORIA DOS MOBILES------------- */
+@media (max-width: 425px){
     h1{
         font-size: 50px !important;
         margin-top: 30% !important;
     }
-    .menu-burger {
-        display: block;
-        top: 36px;
-        width: 25px;
-        height: 2.29px;
-        background-color: white;
-        position: fixed;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        left: 30px;
+    .texto-sobre{
+        text-align: justify;
+        margin-top: 25px;
+        margin-bottom: 0px!important;
     }
-
     .navlist {
         display: block;
         position: fixed;
@@ -1191,63 +1199,72 @@ header.sticky {
         background: rgb(49, 49, 49);
         text-align: center;
     }
-
     .navlist li {
         display: block;
         margin: 15% 0;
         line-height: 30px;
     }
-
     .menu-toggle:checked~.navlist {
         display: block;
         justify-content: flex-start;
     }
-
-    header a img {
-        margin-top: 2%;
-        margin-left: 15%;
-        width: 200px;
-    }
-    .img-sobre{
-        display: none;       
+    .about-text h5{
+        margin-top: 5%;
     }
     #btn2{
+        margin-top: 15px;
         display: flex!important;
         flex-direction: row;
         justify-content: center;
         flex-wrap: nowrap;
         align-items: center;
     }
+    .btn-support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative!important;
+    }
+    /* TENTANDO DAR QUEBRA DE LINHA COM ESSA PROPRIEDADE DO TEXT-MODAL */
+    .text-modal{
+        color: var(--second-color);
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: 400;
+        text-align: justify!important;
+        word-break: break-all;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+/*     
+    .box h3 {
+        font-size: 23px;
+        font-weight: 500;
+        color: var(--text-color);
+        margin-bottom: 10px;
+    }
+     */
     .navlist{
         width: 100%;
     }
-    .maps{
-        display: none;
-    }
+ 
     .top{
         display: flex;
         justify-content: center;
         margin-left: 40%;
         align-items: center;
     }
-   .about i {
-     height: 10px;
-   } 
 
-   .pop-out{
-    height: 50% !important;
-    width: 70% !important;
-
-   }
    .alinhamento-footer p{
-    font-size: 50%;
+    font-size: 80%;
    }
 }
-@media  (min-width: 601px){
+/* @media  (min-width: 601px){
 .row .col.m6 .sobre {
     width: none !important;
     left: auto;
     right: auto;
     align-items: center;
     align-self: center;
-}} */ 
+}} */  
