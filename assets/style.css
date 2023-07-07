@@ -1189,6 +1189,15 @@ margin-bottom: 20px;
         margin-top: 25px;
         margin-bottom: 0px!important;
     }
+    #maps {
+        /* padding: 0px; */
+        display: inline-flex;
+        justify-content: center;
+        margin-left: auto;
+        /* align-items: center; */
+        max-width: 320px;
+        max-height: 200px;
+    }
     .navlist {
         display: block;
         position: fixed;
@@ -1236,6 +1245,7 @@ margin-bottom: 20px;
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         hyphens: auto;
+        /* white-space: pre-wrap; */
     }
 /*     
     .box h3 {
