@@ -1196,7 +1196,7 @@ margin-bottom: 20px;
         max-height: 200px;
     }
     .navlist {
-        display: block;
+        display: none;
         position: fixed;
         width: 100%;
         height: 100%;
@@ -1210,8 +1210,9 @@ margin-bottom: 20px;
         margin: 15% 0;
         line-height: 30px;
     }
+
     .menu-toggle:checked~.navlist {
-        display: block;
+        display: none;
         justify-content: flex-start;
     }
     .about-text h5{
