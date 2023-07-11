@@ -1156,6 +1156,8 @@ margin-bottom: 20px;
     line-height: 1.8;
     font-weight: 400;
     text-align: justify!important;
+    hyphens: auto;
+    [lang]:lang(pt-bt) { hyphenate-character: "-"  };
 }
 
 .end {
@@ -1236,10 +1238,8 @@ margin-bottom: 20px;
         line-height: 1.8;
         font-weight: 400;
         text-align: justify!important;
-        word-break: break-all;
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
         hyphens: auto;
+        [lang]:lang(pt-bt) { hyphenate-character: "-"  };
         /* white-space: pre-wrap; */
     }
 /*     
