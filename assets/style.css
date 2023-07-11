@@ -559,13 +559,8 @@ margin-bottom: 20px;
     line-height: 1.8;
     font-weight: 400;
     text-align: justify!important;
-        /* TENTANDO DAR QUEBRA DE LINHA COM ESSA PROPRIEDADE DO TEXT-MODAL */
-    word-break: break-all;
-    overflow-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
     hyphens: auto;
-    [lang]:lang(pt-bt) { hyphenate-character: "-"  }
+    [lang]:lang(pt-bt) { hyphenate-character: "-"  };
 }
 /* FIM POP UPS */
 .read {
